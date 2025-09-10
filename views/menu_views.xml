@@ -1,0 +1,13 @@
+<odoo>
+    <menuitem id="hospital_menu_root" name="Hospital"/>
+
+    <menuitem id="hospital_menu_paciente" 
+              name="Pacientes" 
+              parent="hospital_menu_root"
+              action="action_paciente"/>
+
+    <menuitem id="hospital_menu_tratamiento" 
+              name="Tratamientos" 
+              parent="hospital_menu_root"
+              action="action_tratamiento"/>
+</odoo>

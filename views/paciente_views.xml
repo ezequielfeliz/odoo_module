@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_paciente_tree" model="ir.ui.view">
+        <field name="name">hospital.paciente.tree</field>
+        <field name="model">hospital.paciente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="rnc"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_paciente_form" model="ir.ui.view">
+        <field name="name">hospital.paciente.form</field>
+        <field name="model">hospital.paciente</field>
+        <field name="arch" type="xml">
+            <form string="Paciente">
+                <sheet>
+                    <group>
+                        <field name="sequence" readonly="1"/>
+                        <field name="name"/>
+                        <field name="rnc"/>
+                        <field name="tratamiento_id"/>
+                        <field name="fecha_alta"/>
+                        <field name="fecha_actualizacion"/>
+                        <field name="state" widget="statusbar"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_paciente" model="ir.actions.act_window">
+        <field name="name">Pacientes</field>
+        <field name="res_model">hospital.paciente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
