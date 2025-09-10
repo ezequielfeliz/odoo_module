@@ -1,3 +1,7 @@
+# Importa las clases necesarias de Odoo:
+# - models: para crear modelos (tablas) en Odoo.
+# - fields: para definir los tipos de campos (Char, Text, Integer, etc.)
+
 from odoo import models, fields
 
 class Tratamiento(models.Model):

@@ -1,3 +1,4 @@
+#json manifest
 {
     'name': 'Vertical Hospital',
     'version': '1.0',
@@ -13,6 +14,7 @@
         'views/paciente_views.xml',
         'views/tratamiento_views.xml',
     ],
+    #logo que aparece en el modulo
     'images': ['static/description/icon.png'],
     'application': True,
 }

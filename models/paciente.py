@@ -1,5 +1,8 @@
 from odoo import models, fields, api
 
+""" mail.thread: permite hacer seguimiento de cambios y enviar notificaciones.
+- mail.activity.mixin: permite asignar actividades relacionadas al paciente."""
+
 class Paciente(models.Model):
     _name = 'hospital.paciente'
     _description = 'Paciente'
@@ -17,6 +20,8 @@ class Paciente(models.Model):
         ('alta', 'Alta'),
         ('baja', 'Baja')
     ], string='Estado', default='borrador', tracking=True)
+    
+    #validacion del RNC
 
     @api.onchange('rnc')
     def _check_rnc(self):
